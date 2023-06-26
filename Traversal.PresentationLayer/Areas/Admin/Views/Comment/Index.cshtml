@@ -1,0 +1,37 @@
+﻿@model List<Traversal.EntityLayer.Concrate.Comment>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="card">
+        <h5 class="card-header bg-primary text-white">Yorumlar</h5>
+        <div class="table-responsive text-nowrap">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Kullanıcı</th>
+                        <th>Rota</th>
+                        <th>Tarih</th>
+                        <th>Sil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.CommentID</td>
+                            <td>@item.CommentUser</td>
+                            <td>@item.Destination.City</td>
+                            <td>@item.CommentDate.ToString("MMMM dd")</td>
+                            <td><a class="btn btn-danger" onclick="deleteItem('/Admin/Comment/DeleteComment/@item.CommentID')" href="#"><i class="bx bx-trash me-1 text-white"></i> Sil</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,49 @@
+﻿@model Traversal.EntityLayer.Concrate.Reservation
+@{
+    ViewData["Title"] = "Traversal | Yeni Rezervasyon";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+<div class="main-content position-relative bg-gray-100 max-height-vh-100 h-100">
+
+    @await Component.InvokeAsync("_BannerPartial")
+    <div class="container-fluid py-4">
+        <div class="card border-dark">
+            <div class="card-header bg-dark text-white">
+                Rezervason Yap
+            </div>
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        @Html.Label("Lokasyon")
+                        @Html.DropDownListFor(x=>x.Destination,(List<SelectListItem>)ViewBag.v,new { @class= "form-control"})
+                    </div>
+                    <div class="form-group">
+                        @Html.Label("Kişi Sayısı")
+                        <input type="text" asp-for="PersonCount" class="form-control" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        @Html.Label("Tarih")
+                        <input type="date" asp-for="ReservationDate" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        @Html.Label("Varsa Eklemek İstedikleriniz")
+                        <textarea class="form-control" asp-for="Description" rows="3"></textarea>
+                    </div>
+                    <div class="d-flex justify-content-end mt-4">
+                        <button class="btn btn-dark text-white mt-2">Rezervasyon Yap</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    window.onload = (function () {
+        swal('Dikkat!',
+            'Rezervasyonunuz başlangıçta onay bekliyor şeklinde alınacaktır. Rezervasyon onaylanma süreci için "Güncel Rezervasyonlarım" menusunu takip etmeyi unutmayın.',
+            'info');
+    });</script>
+
+

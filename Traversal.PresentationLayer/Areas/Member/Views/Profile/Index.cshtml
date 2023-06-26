@@ -1,0 +1,49 @@
+﻿@model Traversal.PresentationLayer.Areas.Member.Models.UserEditViewModel
+@{
+    ViewData["Title"] = "Traversal | Profil";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+<div class="main-content position-relative bg-gray-100 max-height-vh-100 h-100">
+
+    @await Component.InvokeAsync("_BannerPartial")
+    <div class="container-fluid py-4">
+        <div class="card border-dark"> 
+            <div class="card-header bg-dark text-white">
+                Profil Düzenleme Sayfası
+            </div>
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        @Html.Label("Adınız-Soyadınız")
+                        <input type="text" asp-for="Name" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        @Html.Label("Mail Adresiniz")
+                        <input type="text" asp-for="Mail" class="form-control" readonly class="form-control-plaintext" />
+                    </div>
+                    <div class="form-group">
+                        @Html.Label("Telefon Numaranız")
+                        <input type="text" asp-for="Phone" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        @Html.Label("Şifreniz")
+                        <input type="text" asp-for="Password" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        @Html.Label("Şifre Tekrar")
+                        <input type="text" asp-for="ConfirmPassword" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Resim</label>
+                        <input class="form-control" type="file" id="formFile" asp-for="Image">
+                    </div>
+                    <div class="d-flex justify-content-end mt-4">
+                        <button class="btn btn-dark text-white mt-2">Kaydet</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

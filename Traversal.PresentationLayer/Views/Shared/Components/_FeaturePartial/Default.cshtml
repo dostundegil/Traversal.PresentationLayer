@@ -1,0 +1,53 @@
+﻿@model List<Traversal.EntityLayer.Concrate.Feature>
+<div class="best-rooms py-5">
+    <div class="container py-md-5">
+        <div class="ban-content-inf row">
+            @foreach (var item in Model)
+            {
+                if (item.IsBigImage == true)
+                {
+
+                    <div class="maghny-gd-1 col-lg-6">
+                        <div class="maghny-grid">
+                            <figure class="effect-lily border-radius  m-0">
+                                <img class="img-fluid" src="@item.Image" alt="" />
+                                <figcaption>
+                                    <div>
+                                        <h4>@item.Name</h4>
+                                        <p>@item.Description ₺</p>
+                                    </div>
+
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                }
+            }
+            <div class="maghny-gd-1 col-lg-6 mt-lg-0 mt-4">
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        if (item.IsBigImage == false)
+                        {
+
+                            <div class="maghny-gd-1 col-6 mb-4">
+                                <div class="maghny-grid">
+                                    <figure class="effect-lily border-radius">
+                                        <img class="img-fluid" src="@item.Image" alt="" />
+                                        <figcaption>
+                                            <div>
+                                                <h4>@item.Name</h4>
+                                                <p>@item.Description ₺ </p>
+                                            </div>
+
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,87 @@
+﻿@model Traversal.PresentationLayer.Areas.Admin.Models.GuideViewModel
+@{
+    ViewData["Title"] = "AddGuide";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <!-- Content -->
+
+    <div class="container-xxl flex-grow-1 container-p-y">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <h5 class="card-header">Yeni Rehber</h5>
+                    <!-- Account -->
+                    <div class="card-body">
+                        <form method="post" enctype="multipart/form-data">
+                            <div class="card-body">
+                                <div class="d-flex align-items-start align-items-sm-center gap-4">
+                                    <img src="~/sneat-1.0.0/assets/img/avatars/man.png"
+                                         alt="user-avatar"
+                                         class="d-block rounded"
+                                         height="100"
+                                         width="100"
+                                         id="uploadedAvatar" />
+                                    <div class="button-wrapper">
+                                        <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
+                                            <span class="d-none d-sm-block">Fotoğraf Yükle</span>
+                                            <i class="bx bx-upload d-block d-sm-none"></i>
+                                            <input type="file"
+                                                   id="upload"
+                                                   asp-for="Image"
+                                                   class="account-file-input"
+                                                   hidden
+                                                   accept="image/png, image/jpeg" />
+                                        </label>
+
+                                        <p class="text-muted mb-0">JPG, GIF ya da PNG dosyalar. Maksimum boyut 800K</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="my-0" />
+                            <div class="row">
+                                <div class="mb-3 col-md-12">
+                                    <label for="firstName" class="form-label">Ad Soyad</label>
+                                    <input class="form-control"
+                                           type="text"
+                                           id="firstName"
+                                           asp-for="Name"
+                                           autofocus />
+                                           <span asp-validation-for="Name" class="text-danger"></span>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label for="email" class="form-label">Twitter Adresi</label>
+                                    <input class="form-control"
+                                           type="text"
+                                           asp-for="TwitterUrl"
+                                           placeholder="https://www.twitter.com/example" />
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label for="organization" class="form-label">Instagram Adresi</label>
+                                    <input type="text"
+                                           class="form-control"
+                                           asp-for="InstagramUrl"
+                                           placeholder="https://www.instagram.com/example" />
+                                </div>
+                                <div class="mb-3 col-md-12">
+                                    <label for="organization" class="form-label">Açıklama</label>
+                                    <textarea asp-for="Description" rows="4" cols="5" class="form-control"></textarea>
+                                    <span asp-validation-for="Description" class="text-danger"></span>
+                                </div>
+                                <div class="mt-2">
+                                    <button type="submit" class="btn btn-primary me-2"><span class="tf-icons bx bx-plus-circle"></span>Ekle</button>
+                                    <a href="/Admin/Guide/Index/" class="btn btn-danger"><span class="tf-icons bx bx-arrow-back"></span> Vazgeç </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-backdrop fade"></div>
+</div>
+

@@ -1,0 +1,47 @@
+﻿@model List<Traversal.EntityLayer.Concrate.Reservation>
+@{
+    ViewData["Title"] = "ReservationUser";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+   int count = 0;
+}
+
+<div class="container">
+    <div class="card">
+        <h5 class="card-header bg-primary text-white">Kullanıcının Onaylanmış Rezervasyonları</h5>
+        <div class="table-responsive text-nowrap">
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Misafir Ad Soyad</th>
+                        <th>Rota</th>
+                        <th>Kişi Sayısı</th>
+                        <th>Tarih</th>
+                        <th>Detaylar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        count += 1;
+                        <tr>
+                            <td>@count</td>
+@*                            <td>@item.AppUser.Name</td>*@
+                            <td>@item.Destination.City</td>
+                            <td>@item.PersonCount</td>
+                            <td>@item.ReservationDate.ToString("dd/MM/yyyy")</td>
+                            <td>
+                                <a class="btn btn-primary" href="#"><i class="bx bx-circle me-1 text-primary"></i>Detayları Gör</a>
+      
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="mt-3">
+        <a href="/Admin/User/Index/" class="btn btn-primary"><span class="tf-icons bx bx-arrow-back"></span>Kullanıcılara Dön</a>
+    </div>
+</div>
+

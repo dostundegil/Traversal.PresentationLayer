@@ -1,0 +1,21 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Traversal.BusinessLayer.Abstract;
+
+namespace Traversal.PresentationLayer.ViewComponents.Default
+{
+    public class _SubAboutPartial:ViewComponent
+    {
+        private readonly ISubAboutService _subAboutService;
+
+        public _SubAboutPartial(ISubAboutService subAboutService)
+        {
+            _subAboutService = subAboutService;
+        }
+
+        public IViewComponentResult Invoke()
+        {
+            var values = _subAboutService.TGetList();
+            return View(values);
+        }
+    }
+}

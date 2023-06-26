@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+@await Component.InvokeAsync("_SliderPartial")
+
+@await Component.InvokeAsync("_PopularDestinationsPartial")
+
+@await Component.InvokeAsync("_StatisticPartial")
+
+@await Component.InvokeAsync("_FeaturePartial")
+
+@await Component.InvokeAsync("_SubAboutPartial")
+
+@await Component.InvokeAsync("_TestimonialPartial")
