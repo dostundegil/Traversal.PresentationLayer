@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using FluentValidation;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,8 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Traversal.BusinessLayer.Abstract;
 using Traversal.BusinessLayer.Concrate;
+using Traversal.BusinessLayer.ValidationRules;
 using Traversal.DataAccessLayer.Abstract;
 using Traversal.DataAccessLayer.EntityFramework;
+using Traversal.DTOLayer.DTOs.AnnouncementDTOs;
 
 namespace Traversal.BusinessLayer.Container
 {
@@ -44,6 +47,13 @@ namespace Traversal.BusinessLayer.Container
 
             services.AddScoped<IExcelService, ExcelManager>();
             services.AddScoped<IPdfService, PdfManager>();
+
+            services.AddScoped<IAnnouncementDal, EfAnnouncementDal>();
+            services.AddScoped<IAnnouncementService, AnnouncementManager>();
+        }
+        public static void CustomValidator(this IServiceCollection services)
+        {
+            services.AddTransient<IValidator<AnnouncementAddDTO>, AnnouncementValidator>();
         }
     }
 }
