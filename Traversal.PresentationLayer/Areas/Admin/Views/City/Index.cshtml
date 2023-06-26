@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.isNull = false;
 }
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -34,9 +35,15 @@
     <input type="text" id="txtcitdaynightname" placeholder="güncellenecek gün gece bilgisini giriniz" class="form-control" />
 </div>
 <br />
-<div id="destinationlistbyid">
-</div>
-
+@if (ViewBag.isNull)
+{
+    <div>Böyle bir şehir bulunamadı!</div>
+}
+else
+{
+    <div id="destinationlistbyid">
+    </div>
+}
 <br />
 <div>
     <input type="text" id="txtcity" placeholder="Şehir adını giriniz" class="form-control" />

@@ -39,8 +39,14 @@ namespace Traversal.PresentationLayer.Areas.Admin.Controllers
         public IActionResult GetById(int DestinationID)
         {
             var values = _DestinationService.TGetById(DestinationID);
+            if (values == null) {
+                ViewBag.isNull = true;
+            }
+            else { 
             var jsonValues = JsonConvert.SerializeObject(values);
             return Json(jsonValues);
+            }
+            return View();
         }
 
         public IActionResult DeleteCity(int id)

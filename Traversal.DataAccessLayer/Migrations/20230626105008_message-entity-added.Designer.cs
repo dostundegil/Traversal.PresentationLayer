@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Traversal.DataAccessLayer.Concrate;
 
 namespace Traversal.DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20230626105008_message-entity-added")]
+    partial class messageentityadded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -172,27 +174,6 @@ namespace Traversal.DataAccessLayer.Migrations
                     b.HasKey("About2ID");
 
                     b.ToTable("About2s");
-                });
-
-            modelBuilder.Entity("Traversal.EntityLayer.Concrate.Announcement", b =>
-                {
-                    b.Property<int>("AnnouncementID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("AnnouncementDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Content")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("AnnouncementID");
-
-                    b.ToTable("Announcements");
                 });
 
             modelBuilder.Entity("Traversal.EntityLayer.Concrate.AppRole", b =>
@@ -375,14 +356,8 @@ namespace Traversal.DataAccessLayer.Migrations
                     b.Property<DateTime>("MessageDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("MessageType")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
 
                     b.Property<string>("Subject")
                         .HasColumnType("nvarchar(max)");
