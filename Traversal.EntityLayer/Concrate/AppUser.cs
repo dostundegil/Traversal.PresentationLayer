@@ -14,5 +14,6 @@ namespace Traversal.EntityLayer.Concrate
         public string Name { get; set; }
         public string Gender { get; set; }
         public List<Reservation> Reservations { get; set; }
+        public List<Comment> Comments { get; set; }
     }
 }

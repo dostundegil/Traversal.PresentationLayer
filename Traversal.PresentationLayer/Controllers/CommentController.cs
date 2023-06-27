@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using Traversal.BusinessLayer.Abstract;
 using Traversal.EntityLayer.Concrate;
 
 namespace Traversal.PresentationLayer.Controllers
 {
+    [AllowAnonymous]
     public class CommentController : Controller
     {
         private readonly ICommentService _commentService;
