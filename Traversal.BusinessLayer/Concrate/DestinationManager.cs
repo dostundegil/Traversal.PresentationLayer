@@ -33,6 +33,11 @@ namespace Traversal.BusinessLayer.Concrate
             return _destinationDal.GetByID(id);
         }
 
+        public Destination TGetDestinationsWithGuide(int id)
+        {
+            return _destinationDal.GetDestinationsWithGuide(id);
+        }
+
         public List<Destination> TGetList()
         {
             return _destinationDal.GetList();

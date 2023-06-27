@@ -9,5 +9,6 @@ namespace Traversal.DataAccessLayer.Abstract
 {
     public interface IDestinationDal:IGenericDal<Destination>
     {
+        public Destination GetDestinationsWithGuide(int id);
     }
 }

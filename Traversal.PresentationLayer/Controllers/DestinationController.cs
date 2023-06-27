@@ -31,7 +31,7 @@ namespace Traversal.PresentationLayer.Controllers
             ViewBag.destID = id;
             var value = await _userManager.FindByNameAsync(User.Identity.Name);
             ViewBag.userID = value.Id;
-            var values = _destinationService.TGetById(id);
+            var values = _destinationService.TGetDestinationsWithGuide(id);
             return View(values);
         }
         [HttpPost]
