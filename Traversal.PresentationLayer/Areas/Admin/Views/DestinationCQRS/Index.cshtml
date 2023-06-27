@@ -1,12 +1,13 @@
-﻿@model List<Traversal.EntityLayer.Concrate.Destination>
+﻿@model List<GetAllDestinationQueryResult>
 @{
-    ViewData["Title"] = "Traversal | Admin Rotalar";
+    ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
 }
 
 <div class="container">
     <div class="card">
-        <h5 class="card-header bg-primary text-white">Tur Rotaları</h5>
+        <h5 class="card-header bg-primary text-white">CQRS Tur Rotaları</h5>
         <div class="table-responsive text-nowrap">
             <table class="table table-borderless">
                 <thead>
@@ -21,20 +22,20 @@
                 <tbody>
                     @foreach (var item in Model)
                     {
+                        count++;
                         <tr>
-                            <td>@item.DestinationID</td>
-                            <td>@item.City</td>
-                            <td>@item.Price</td>
-                            <td>@item.Capacity</td>
+                            <td>@count</td>
+                            <td>@item.city</td>
+                            <td>@item.price ₺</td>
+                            <td>@item.capacity</td>
                             <td>
                                 <div class="dropdown">
                                     <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
                                         <i class="bx bx-dots-vertical-rounded"></i>
                                     </button>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="/Destination/DestinationDetails/@item.DestinationID"><i class="bx bx-log-in-circle me-1 text-primary"></i> Sitede Gör</a>
-                                        <a class="dropdown-item" onclick="deleteItem('/Admin/Destination/DeleteDestination/@item.DestinationID')" href="#"><i class="bx bx-trash me-1 text-danger"></i> Sil</a>
-                                        <a class="dropdown-item" href="/Admin/Destination/EditDestination/@item.DestinationID"><i class="bx bx-edit-alt me-1 text-warning"></i> Güncelle</a>
+                                        <a class="dropdown-item" onclick="deleteItem('/Admin/DestinationCQRS/DeleteDestination/@item.id')" href="#"><i class="bx bx-trash me-1 text-danger"></i> Sil</a>
+                                        <a class="dropdown-item" href="/Admin/DestinationCQRS/GetDestination/@item.id"><i class="bx bx-edit-alt me-1 text-warning"></i> Güncelle</a>
                                     </div>
                                 </div>
                             </td>
@@ -45,7 +46,8 @@
         </div>
     </div>
     <div class="mt-3">
-        <a href="/Admin/Destination/AddDestination/" class="btn btn-primary"><span class="tf-icons bx bx-plus-circle"></span>Yeni Rota</a>
+        <a href="/Admin/DestinationCQRS/AddDestination/" class="btn btn-primary"><span class="tf-icons bx bx-plus-circle"></span>Yeni Rota</a>
         <a href="/Admin/ExcelReport/DestinationReport/" class="btn btn-success float-end"><span class="tf-icons bx bxs-report"></span>Excel Raporu Al</a>
     </div>
 </div>
+

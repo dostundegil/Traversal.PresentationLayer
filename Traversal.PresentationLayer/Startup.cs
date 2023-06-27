@@ -1,4 +1,5 @@
 using FluentValidation.AspNetCore;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -11,6 +12,8 @@ using System.IO;
 using Traversal.BusinessLayer.Container;
 using Traversal.DataAccessLayer.Concrate;
 using Traversal.EntityLayer.Concrate;
+using Traversal.PresentationLayer.CQRS.Handlers;
+using Traversal.PresentationLayer.CQRS.Handlers.DestinationHandlers;
 using Traversal.PresentationLayer.Models;
 
 namespace Traversal.PresentationLayer
@@ -27,6 +30,15 @@ namespace Traversal.PresentationLayer
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<GetAllDestinationQueryHandler>();
+            services.AddScoped<GetDestinationByIdQueryHandler>();
+            services.AddScoped<CreateDestinationCommandHandler>();
+            services.AddScoped<RemoveDestinationCommandHandler>();
+            services.AddScoped<UpdateDestinationCommandHandler>();
+
+            services.AddMediatR(typeof(Startup));
+
+
             services.AddLogging(x =>
             {
 

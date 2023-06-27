@@ -1,0 +1,42 @@
+﻿@model CreateDestinationCommand
+@{
+    ViewData["Title"] = "AddDestination";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center bg-primary">
+            <h5 class="mb-0  text-white">Yeni Rota</h5>
+        </div>
+        <div class="card-body mt-2">
+            <form method="post">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-fullname">Şehir</label>
+                            <input type="text" asp-for="City" class="form-control" id="basic-default-fullname" placeholder="İstanbul" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-company">Fiyat</label>
+                            <input type="text" asp-for="Price" class="form-control" id="basic-default-company" placeholder="1200" />
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-company">Gün Gece</label>
+                            <input type="text" asp-for="DayNight" class="form-control" id="basic-default-company" placeholder="3 Gün 4 Gece" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-company">Kapasite</label>
+                            <input type="text" asp-for="Capacity" class="form-control" id="basic-default-company" placeholder="25" />
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary"><span class="tf-icons bx bx-plus-circle"></span> Ekle</button>
+                <a href="/Admin/Destination/Index/" class="btn btn-danger"><span class="tf-icons bx bx-arrow-back"></span> Vazgeç </a>
+            </form>
+        </div>
+    </div>
+</div>
+

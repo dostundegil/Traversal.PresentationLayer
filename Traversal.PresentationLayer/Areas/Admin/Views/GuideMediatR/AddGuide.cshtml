@@ -1,0 +1,47 @@
+﻿@model CreateGuideCommand
+@{
+    ViewData["Title"] = "AddGuide";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <!-- Content -->
+
+    <div class="container-xxl flex-grow-1 container-p-y">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <h5 class="card-header">CQRS MediatR Rehber Ekle</h5>
+                    <!-- Account -->
+                    <div class="card-body">
+                        <form method="post">
+                            <br />
+                            <div class="row">
+                                <div class="mb-3 col-md-12">
+                                    <label for="firstName" class="form-label">Ad Soyad</label>
+                                    <input class="form-control"
+                                           type="text"
+                                           id="firstName"
+                                           asp-for="Name"
+                                           autofocus />
+                                </div>
+                                <div class="mb-3 col-md-12">
+                                    <label for="organization" class="form-label">Açıklama</label>
+                                    <textarea asp-for="Description" rows="4" cols="5" class="form-control"></textarea>
+                                </div>
+                                <div class="mt-2">
+                                    <button type="submit" class="btn btn-primary me-2"><span class="tf-icons bx bx-plus-circle"></span>Ekle</button>
+                                    <a href="/Admin/GuideMediatR/Index/" class="btn btn-danger"><span class="tf-icons bx bx-arrow-back"></span> Vazgeç </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-backdrop fade"></div>
+</div>
+
