@@ -49,14 +49,32 @@
                         </li>
                     }
 
+                    @if (ViewData["Title"] == "Traversal | Rehberlerimiz")
+                    {
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/Guide/Index/">Rehberlerimiz <span class="sr-only">(current)</span></a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Guide/Index/">Rehberlerimiz</a>
+                        </li>
+                    }
 
+                    @if (ViewData["Title"] == "Traversal | İletişim")
+                    {
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/Contact/Index/">İletişim <span class="sr-only">(current)</span></a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Contact/Index/">İletişim</a>
+                        </li>
+                    }
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="pricing.html">Rehberlerimiz</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">İletişim</a>
-                    </li>
 
                 </ul>
             </div>
