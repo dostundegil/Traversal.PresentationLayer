@@ -5,7 +5,7 @@ using Traversal.EntityLayer.Concrate;
 namespace Traversal.PresentationLayer.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    //[Route("Admin/[controller]/[action]")]
+    [Route("Admin/[controller]/[action]/{id?}")]
     public class DestinationController : Controller
     {
         private readonly IDestinationService _destinationService;
@@ -29,13 +29,13 @@ namespace Traversal.PresentationLayer.Areas.Admin.Controllers
         public IActionResult AddDestination(Destination destination)
         {
             _destinationService.TAdd(destination);
-            return RedirectToAction("Index", "Destination", new { area = "Admin" });
+            return RedirectToAction("Index");
         }
         public IActionResult DeleteDestination(int id)
         {
             var values = _destinationService.TGetById(id);
             _destinationService.TDelete(values);
-            return RedirectToAction("Index", "Destination", new { area = "Admin" });
+            return RedirectToAction("Index");
         }
         [HttpGet]
         public IActionResult EditDestination(int id)
@@ -47,7 +47,7 @@ namespace Traversal.PresentationLayer.Areas.Admin.Controllers
         public IActionResult EditDestination(Destination destination)
         {
             _destinationService.TUpdate(destination);
-            return RedirectToAction("Index", "Destination", new { area = "Admin" }); ;
+            return RedirectToAction("Index");
         }
     }
 }
