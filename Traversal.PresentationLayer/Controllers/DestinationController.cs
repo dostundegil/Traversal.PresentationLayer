@@ -28,6 +28,7 @@ namespace Traversal.PresentationLayer.Controllers
         public async Task<IActionResult> DestinationDetails(int id)
         {
             ViewBag.id = id;
+            ViewBag.destID = id;
             var value = await _userManager.FindByNameAsync(User.Identity.Name);
             ViewBag.userID = value.Id;
             var values = _destinationService.TGetById(id);

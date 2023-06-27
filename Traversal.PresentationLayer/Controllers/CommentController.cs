@@ -21,9 +21,8 @@ namespace Traversal.PresentationLayer.Controllers
             _userManager = userManager;
         }
         [HttpGet]
-        public PartialViewResult AddComment(int id)
+        public PartialViewResult AddComment()
         {
-            ViewBag.id = id;
             return PartialView();
         }
         [HttpPost]
