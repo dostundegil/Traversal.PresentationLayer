@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Traversal.BusinessLayer.Abstract;
 using Traversal.EntityLayer.Concrate;
 
 namespace Traversal.PresentationLayer.Controllers
 {
+    [AllowAnonymous]
     public class DestinationController : Controller
     {
         private readonly IDestinationService _destinationService;
