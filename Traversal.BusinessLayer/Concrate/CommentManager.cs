@@ -53,5 +53,10 @@ namespace Traversal.BusinessLayer.Concrate
         {
             return _commentDal.GetCommentsWithDestination();
         }
+
+        public List<Comment> TGetCommentsWithDestinationandUser(int id)
+        {
+            return _commentDal.GetCommentsWithDestinationandUser(id);
+        }
     }
 }

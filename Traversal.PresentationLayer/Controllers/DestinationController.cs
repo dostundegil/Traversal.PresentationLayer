@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 using Traversal.BusinessLayer.Abstract;
 using Traversal.EntityLayer.Concrate;
 
@@ -9,10 +11,12 @@ namespace Traversal.PresentationLayer.Controllers
     public class DestinationController : Controller
     {
         private readonly IDestinationService _destinationService;
+        private readonly UserManager<AppUser> _userManager;
 
-        public DestinationController(IDestinationService destinationService)
+        public DestinationController(IDestinationService destinationService, UserManager<AppUser> userManager)
         {
             _destinationService = destinationService;
+            _userManager = userManager;
         }
 
         public IActionResult Index()
@@ -21,9 +25,11 @@ namespace Traversal.PresentationLayer.Controllers
             return View(values);
         }
         [HttpGet]
-        public IActionResult DestinationDetails(int id)
+        public async Task<IActionResult> DestinationDetails(int id)
         {
             ViewBag.id = id;
+            var value = await _userManager.FindByNameAsync(User.Identity.Name);
+            ViewBag.userID = value.Id;
             var values = _destinationService.TGetById(id);
             return View(values);
         }

@@ -99,7 +99,7 @@
                     @await Component.InvokeAsync("_GuideDetails")
                     @await Component.InvokeAsync("_CommentListPartial", new {id=ViewBag.id})
 
-                    @await Html.PartialAsync("~/Views/Comment/AddComment.cshtml")
+                    @await Html.PartialAsync("~/Views/Comment/AddComment.cshtml", new {id=ViewBag.id})
                 </div>
             </div>
         </div>
