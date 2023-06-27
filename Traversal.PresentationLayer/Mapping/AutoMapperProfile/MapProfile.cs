@@ -2,6 +2,7 @@
 using Traversal.DTOLayer.DTOs.AnnouncementDTOs;
 using Traversal.DTOLayer.DTOs.AppUserDTOs;
 using Traversal.DTOLayer.DTOs.CityDTOs;
+using Traversal.DTOLayer.DTOs.ContactDTOs;
 using Traversal.EntityLayer.Concrate;
 
 namespace Traversal.PresentationLayer.Mapping.AutoMapperProfile
@@ -19,6 +20,8 @@ namespace Traversal.PresentationLayer.Mapping.AutoMapperProfile
             CreateMap<AnnouncementListDTO, Announcement>().ReverseMap();
 
             CreateMap<AnnouncementUpdateDTO, Announcement>().ReverseMap();
+
+            CreateMap<SendMessageDTO, ContactUs>().ReverseMap();
         }
     }
 }

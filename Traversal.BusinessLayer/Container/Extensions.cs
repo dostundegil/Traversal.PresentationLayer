@@ -39,6 +39,9 @@ namespace Traversal.BusinessLayer.Container
             services.AddScoped<IContactUsDal, EfContactUsDal>();
             services.AddScoped<IContactUsService, ContactUsManager>();
 
+            services.AddScoped<IContactDal, EfContactDal>();
+            services.AddScoped<IContactService, ContactManager>();
+
             services.AddScoped<IGuideDal, EfGuideDal>();
             services.AddScoped<IGuideService, GuideManager>();
 

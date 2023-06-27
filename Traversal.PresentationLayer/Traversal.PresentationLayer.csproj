@@ -387,6 +387,7 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Member\Data\" />
+    <Folder Include="ViewComponents\Contact\" />
     <Folder Include="wwwroot\images\guideimages\" />
     <Folder Include="wwwroot\member-dashboard\.git\objects\info\" />
     <Folder Include="wwwroot\member-dashboard\.git\objects\pack\" />
