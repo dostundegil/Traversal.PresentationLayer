@@ -10,5 +10,6 @@ namespace Traversal.BusinessLayer.Abstract
     public interface IDestinationService : IGenericService<Destination>
     {
         public Destination TGetDestinationsWithGuide(int id);
+        public List<Destination> TGetLast4Destinations();
     }
 }
