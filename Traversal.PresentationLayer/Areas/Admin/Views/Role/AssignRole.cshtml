@@ -1,8 +1,66 @@
-﻿
+﻿@model List<RoleAssignViewModel>
 @{
     ViewData["Title"] = "AssignRole";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    string yetki = "";
 }
+<div class="container">
+    <div class="card">
+        <div class="card-header text-white bg-primary">Kullanıcı Rol Atama</div>
+        <div class="card-body">
+            <form method="post">
+                <div class="row">
 
-<h1>AssignRole</h1>
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                        <div class="col-4 mt-4">
+                            <div class="form-check">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="row">
+                                            <div class="col-sm"> </div>
+                                            <div class="col-sm">
+
+                                                <input type="checkbox" asp-for="@Model[i].RoleExist" class="form-check-input" />
+                                                <label class="form-check-label" for="@Model[i].RoleExist">@Model[i].RoleName</label>
+                                            </div>
+                                            <div class="col-sm"> </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        @if (Model[i].RoleName == "Admin")
+                                        {
+                                            yetki = "Kullanıcı Silme / Vitrin Düzenleme / Rol Atama - Silme / Rota Ekleme - Güncelleme - Silme ";
+
+                                        }
+                                        else if (Model[i].RoleName == "Member")
+                                        {
+                                            yetki = "Rotaları Görüntüleme / Rotaya Katılma / Vitrin Sayfasında Gezinme ";
+
+                                        }
+                                        else if (Model[i].RoleName == "Guide")
+                                        {
+                                            yetki = "Rotaları Görüntüleme / Blog Ekleme / Kendi Bloglarını Güncelleme";
+
+                                        }
+                                        @yetki
+                                    </div>
+                                </div>
+                                <input type="hidden" asp-for="@Model[i].RoleID" />
+                                <input type="hidden" asp-for="@Model[i].RoleName" />
+                            </div>
+                        </div>
+
+                    }
+                </div>
+                <div class="mt-2 ml-2">
+                    <button class="btn btn-success ">Kaydet</button>
+                    <a href="/Admin/Role/UserList/" class="btn btn-danger">Vazgeç</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>
 

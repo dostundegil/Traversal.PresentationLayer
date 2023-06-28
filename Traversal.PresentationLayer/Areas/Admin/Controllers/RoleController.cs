@@ -81,9 +81,10 @@ namespace Traversal.PresentationLayer.Areas.Admin.Controllers
             var values = _userManager.Users.ToList();
             return View(values);
         }
-
+        [HttpGet]
         public async Task<IActionResult> AssignRole(int id)
         {
+            TempData["userid"] = id;
             var user = _userManager.Users.FirstOrDefault(x => x.Id == id);
             var roles = _roleManager.Roles.ToList();
             var userRoles = await _userManager.GetRolesAsync(user);
@@ -115,7 +116,7 @@ namespace Traversal.PresentationLayer.Areas.Admin.Controllers
                 }
 
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("UserList");
         }
     }
 }
