@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Traversal.EntityLayer", "Tr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Traversal.DataAccessLayer", "Traversal.DataAccessLayer\Traversal.DataAccessLayer.csproj", "{EEAFFAB0-72C8-434E-8389-AB7220888CAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Traversal.DTOLayer", "Traversal.DTOLayer\Traversal.DTOLayer.csproj", "{7286ECCC-054D-422B-8EE3-507F08600DC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Traversal.DTOLayer", "Traversal.DTOLayer\Traversal.DTOLayer.csproj", "{7286ECCC-054D-422B-8EE3-507F08600DC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRApi", "SignalRApi\SignalRApi.csproj", "{05A36AC5-EE72-4BDC-B958-9B56FCCBCB66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{7286ECCC-054D-422B-8EE3-507F08600DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7286ECCC-054D-422B-8EE3-507F08600DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7286ECCC-054D-422B-8EE3-507F08600DC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05A36AC5-EE72-4BDC-B958-9B56FCCBCB66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05A36AC5-EE72-4BDC-B958-9B56FCCBCB66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05A36AC5-EE72-4BDC-B958-9B56FCCBCB66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05A36AC5-EE72-4BDC-B958-9B56FCCBCB66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
