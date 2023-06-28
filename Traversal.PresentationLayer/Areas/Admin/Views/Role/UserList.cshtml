@@ -1,0 +1,59 @@
+﻿@model List<AppUser>
+@{
+    ViewData["Title"] = "UserList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+
+<div class="container">
+    <div class="card">
+        <h5 class="card-header bg-primary text-white">Kullanıcılar</h5>
+        <div class="table-responsive text-nowrap">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Fotoğraf</th>
+                        <th>Ad Soyad</th>
+                        <th>Mail</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+
+                        <tr>
+                            @{
+                                count += 1;
+                            }
+                            <td>@count</td>
+                            <td>
+                                <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                                    <li data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        class="avatar avatar-m pull-up"
+                                        title="@item.Name">
+                                        <img src="@item.ImageUrl" alt="Avatar" class="rounded-circle" />
+                                    </li>
+                                </ul>
+                            </td>
+
+                            <td>@item.Name</td>
+                            <td>@item.Email</td>
+
+                            <td>
+                                <a class="btn btn-danger" href="/Admin/Role/EditGuide/@item.Id"><i class="bx bx-edit-alt me-1 text-white"></i> Rol Ata</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="mt-3">
+        <a href="/Admin/Role/AddGuide/" class="btn btn-primary"><span class="tf-icons bx bx-plus-circle"></span>Yeni Kullanıcı</a>
+    </div>
+</div>
