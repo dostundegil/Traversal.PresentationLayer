@@ -1,15 +1,14 @@
 ﻿@model List<Traversal.EntityLayer.Concrate.Reservation>
 @{
     ViewData["Title"] = "Traversal | Geçmiş Rezervasyonlar";
-    Layout = "~/Views/Shared/_UserLayout.cshtml";
+    Layout = "~/Views/Shared/_MemberLayout.cshtml";
+    int count = 0;
 }
 
 
 @if (!Model.Any())
 {
-    <div class="main-content position-relative bg-gray-100 max-height-vh-100 h-100">
 
-        @await Component.InvokeAsync("_BannerPartial")
         <div class="card mt-4">
             <div class="card-header bg-dark text-white">
                 <h5 class="text-white">Bulamadık!</h5>
@@ -18,68 +17,55 @@
                 <h6>Geçmiş Rezervasyonunuz Bulunmamaktadır</h6>
             </div>
         </div>
-    </div>
 }
 
 else
 {
 
-    <div class="main-content position-relative bg-gray-100 max-height-vh-100 h-100">
-        @await Component.InvokeAsync("_BannerPartial")
-        <div class="container-fluid py-4">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card mb-4">
-                        <div class="card-header pb-0 bg-dark text-white">
-                            <h6 class="text-white">Geçmiş Rezervasyonlarım</h6>
-                        </div>
-                        <div class="card-body px-0 pt-0 pb-2">
-                            <div class="table-responsive p-0">
-                                <table class="table align-items-center mb-0">
-                                    <thead>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Geçmiş Rezervasyonlar</h4>
+                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                    <div class="heading-elements">
+                        <ul class="list-inline mb-0">
+                            <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                            <li><a data-action="close"><i class="ft-x"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-content collapse show">
+                    <div class="card-body">
+                        <p class="card-text">Web Sitemiz Traversal üzerinde daha önce yapmış olduğunuz geçmiş rezervasyon listenize aşağıdan erişebilirsiniz. </p>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Lokasyon</th>
+                                        <th>Kişi Sayısı</th>
+                                        <th>Rezervasyon Tarihi</th>
+                                        <th>Durum</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        count++;
                                         <tr>
-                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">#</th>
-                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Lokasyon</th>
-                                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Kişi sayısı</th>
-                                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Rezervasyon Tarihi</th>
-                                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Durum</th>
-                                            <th class="text-secondary opacity-7"></th>
+                                            <td>@count</td>
+                                            <td>@item.Destination.City</td>
+                                            <td>@item.PersonCount</td>
+                                            <td>@(((DateTime)item.ReservationDate).ToString("dd-MMM-yyyy"))</td>
+                                            <td>@item.Status</td>
                                         </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach (var item in Model)
-                                        {
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex px-2 py-1 text-center">
-                                                        <div class="d-flex flex-column justify-content-center">
-                                                            <h6 class="mb-0 text-sm">@item.ReservationID</h6>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <h6 class="mb-0 text-sm">@item.Destination.City</h6>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <h6 class="mb-0 text-sm">@item.PersonCount</h6>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <h6 class="mb-0 text-sm">@item.ReservationDate.ToString("MMMM dd")</h6>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <h6 class="mb-0 text-sm">@item.Status</h6>
-                                                </td>
-                                                <td class="align-middle">
-                                                    <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                                                        Detaylar
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        }
+                                    }
 
-                                    </tbody>
-                                </table>
-                            </div>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>

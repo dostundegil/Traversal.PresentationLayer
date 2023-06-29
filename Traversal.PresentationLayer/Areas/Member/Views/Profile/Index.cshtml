@@ -1,46 +1,51 @@
 ﻿@model Traversal.PresentationLayer.Areas.Member.Models.UserEditViewModel
 @{
     ViewData["Title"] = "Traversal | Profil";
-    Layout = "~/Views/Shared/_UserLayout.cshtml";
+    Layout = "~/Views/Shared/_MemberLayout.cshtml";
 }
-<div class="main-content position-relative bg-gray-100 max-height-vh-100 h-100">
-
-    @await Component.InvokeAsync("_BannerPartial")
-    <div class="container-fluid py-4">
-        <div class="card border-dark"> 
-            <div class="card-header bg-dark text-white">
-                Profil Düzenleme Sayfası
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Profil Güncelleme Sayfası</h4>
+                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                <div class="heading-elements">
+                    <ul class="list-inline mb-0">
+                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                        <li><a data-action="close"><i class="ft-x"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="card-body">
-                <form method="post" enctype="multipart/form-data">
-                    <div class="form-group">
-                        @Html.Label("Adınız-Soyadınız")
+            <div class="card-content collapse show">
+                <div class="card-body">
+                    <p class="card-text">Profil ile ilgili bilgilerinizi bu sayfadan güncelleyebilirsiniz</p>
+                    <form method="post" enctype="multipart/form-data">
+                        @Html.Label("Adınız")
                         <input type="text" asp-for="Name" class="form-control" />
-                    </div>
-                    <div class="form-group">
+                        <br />
+                        <br />
                         @Html.Label("Mail Adresiniz")
-                        <input type="text" asp-for="Mail" class="form-control" readonly class="form-control-plaintext" />
-                    </div>
-                    <div class="form-group">
-                        @Html.Label("Telefon Numaranız")
-                        <input type="text" asp-for="Phone" class="form-control" />
-                    </div>
-                    <div class="form-group">
+                        <input type="text" asp-for="Mail" class="form-control" />
+                        <br />
                         @Html.Label("Şifreniz")
                         <input type="text" asp-for="Password" class="form-control" />
-                    </div>
-                    <div class="form-group">
+                        <br />
                         @Html.Label("Şifre Tekrar")
                         <input type="text" asp-for="ConfirmPassword" class="form-control" />
-                    </div>
-                    <div class="mb-3">
-                        <label for="formFile" class="form-label">Resim</label>
-                        <input class="form-control" type="file" id="formFile" asp-for="Image">
-                    </div>
-                    <div class="d-flex justify-content-end mt-4">
-                        <button class="btn btn-dark text-white mt-2">Kaydet</button>
-                    </div>
-                </form>
+                        <br />
+                        @Html.Label("Telefon Numarası")
+                        <input type="text" asp-for="Phone" class="form-control" />
+                        <br />
+                        <div class="form-group">
+                            <label>Resim Seçin</label>
+                            <input type="file" asp-for="Image" />
+                        </div>
+                        <br />
+                        <button class="btn btn-primary">Bilgileri Güncelle</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
