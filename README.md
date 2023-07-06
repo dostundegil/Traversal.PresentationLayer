@@ -25,22 +25,37 @@ User Interface: HTML/CSS - BOOTSTRAP were utilized.
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about">About</a>
-    </li>
-    <li>
       <a href="#used">Used</a>
     </li>
     <li>
-      <a href="#home">Home Page</a>
+      <a href="#technical-specifications-of-the-project">Home Page</a>
     </li>
-        <li>
-      <a href="#api-layer">API Layer</a>
+    <li>
+      <a href="#home">Technical Specifications of the Project</a>
     </li>
-        <li>
-      <a href="#user-panel">API Consume</a>
+     <li>
+      <a href="#features-for-users">Features for Users</a>
     </li>
-        <li>
+    <li>
+      <a href="#features-for-admin">Features for Admins</a>
+    </li>
+     <li>
+      <a href="#ui">UI</a>
+    </li>
+    <li>
+      <a href="#destination-details">Destination Details</a>
+    </li>
+    <li>
+      <a href="#login-register">Login - Register</a>
+    </li>
+    <li>
+      <a href="#member-panel">Member Panel</a>
+    </li>
+    <li>
       <a href="#admin-panel">Admin Panel</a>
+    </li>
+   <li>
+      <a href="#contact">Contact</a>
     </li>
   </ol>
 </details>
