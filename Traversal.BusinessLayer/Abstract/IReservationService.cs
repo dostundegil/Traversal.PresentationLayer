@@ -12,5 +12,9 @@ namespace Traversal.BusinessLayer.Abstract
         List<Reservation> GetListWithReservationByWaitApproval(int id);
         List<Reservation> GetListWithReservationByAccepted(int id);
         List<Reservation> GetListWithReservationByPrevious(int id);
+        List<Reservation> TGetPreviousReservations();
+        List<Reservation> TGetWaitingApprovalReservations();
+        List<Reservation> TGetOldReservations();
+        void TApproveReservation(int id);
     }
 }

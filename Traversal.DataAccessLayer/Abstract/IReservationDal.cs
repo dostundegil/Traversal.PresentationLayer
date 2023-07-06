@@ -12,7 +12,9 @@ namespace Traversal.DataAccessLayer.Abstract
         List<Reservation> GetListWithReservationByWaitApproval(int id);
         List<Reservation> GetListWithReservationByAccepted(int id);
         List<Reservation> GetListWithReservationByPrevious(int id);
-
-
+        List<Reservation> GetPreviousReservations();
+        List<Reservation> GetWaitingApprovalReservations();
+        List<Reservation> GetOldReservations();
+        void ApproveReservation(int id);
     }
 }

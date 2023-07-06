@@ -9,7 +9,7 @@ using Traversal.EntityLayer.Concrate;
 
 namespace Traversal.BusinessLayer.Concrate
 {
-    public class ReservationManager:IReservationService
+    public class ReservationManager : IReservationService
     {
         private readonly IReservationDal _reservationDal;
 
@@ -38,6 +38,11 @@ namespace Traversal.BusinessLayer.Concrate
             _reservationDal.Insert(t);
         }
 
+        public void TApproveReservation(int id)
+        {
+            _reservationDal.ApproveReservation(id);
+        }
+
         public void TDelete(Reservation t)
         {
             _reservationDal.Delete(t);
@@ -51,6 +56,21 @@ namespace Traversal.BusinessLayer.Concrate
         public List<Reservation> TGetList()
         {
             return _reservationDal.GetList();
+        }
+
+        public List<Reservation> TGetOldReservations()
+        {
+            return _reservationDal.GetOldReservations();
+        }
+
+        public List<Reservation> TGetPreviousReservations()
+        {
+            return _reservationDal.GetPreviousReservations();
+        }
+
+        public List<Reservation> TGetWaitingApprovalReservations()
+        {
+            return _reservationDal.GetWaitingApprovalReservations();
         }
 
         public void TUpdate(Reservation t)
