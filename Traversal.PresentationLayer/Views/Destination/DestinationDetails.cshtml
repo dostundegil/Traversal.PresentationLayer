@@ -141,7 +141,7 @@
 
 <script>
     $(document).ready(function () {
-        var requestData = { value: "@Model.City" };
+        var requestData = { value: "@Model.CityEn" };
 
         $.ajax({
             url: 'https://booking-com.p.rapidapi.com/v1/hotels/locations?name=' + encodeURIComponent(requestData.value) + '&locale=tr',
@@ -192,7 +192,7 @@
                 });
             },
             error: function () {
-                $('#dataList').html('<pBir hata oluştu.</p>');
+                $('#dataList').html('<p>Bir hata oluştu.</p>');
             },
         });
     });
