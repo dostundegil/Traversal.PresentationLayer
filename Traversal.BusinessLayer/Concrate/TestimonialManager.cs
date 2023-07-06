@@ -30,7 +30,7 @@ namespace Traversal.BusinessLayer.Concrate
 
         public Testimonial TGetById(int id)
         {
-            throw new NotImplementedException();
+           return _testimonialDal.GetByID(id);
         }
 
         public List<Testimonial> TGetList()
