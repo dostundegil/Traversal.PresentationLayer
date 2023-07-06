@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Traversal.EntityLayer.Concrate;
+using Traversal.PresentationLayer.Areas.Admin.Models;
 using Traversal.PresentationLayer.Models;
 
 namespace Traversal.PresentationLayer.Controllers
@@ -10,16 +13,18 @@ namespace Traversal.PresentationLayer.Controllers
     [AllowAnonymous]
     public class LoginController : Controller
     {
+        private readonly RoleManager<AppRole> _roleManager;
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
-		public LoginController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
-		{
-			_userManager = userManager;
-            _signInManager = signInManager;
 
+        public LoginController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<AppRole> roleManager)
+        {
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _roleManager = roleManager;
         }
 
-		[HttpGet]
+        [HttpGet]
         public IActionResult SignUp()
         {
             return View();
@@ -64,6 +69,17 @@ namespace Traversal.PresentationLayer.Controllers
                 var result = await _signInManager.PasswordSignInAsync(p.Username, p.Password, false, true);
                 if (result.Succeeded)
                 {
+                    var user = _userManager.Users.FirstOrDefault(x => x.UserName == p.Username);
+                    var roles = _roleManager.Roles.ToList();
+                    var userRoles = await _userManager.GetRolesAsync(user);
+                    foreach (var item in userRoles)
+                    {
+                        if (item == "Admin")
+                        {
+                            return RedirectToAction("Index", "Dashboard", new { area = "Admin" });
+                        }
+                    }
+
                     return RedirectToAction("Index","Profile",new {area="Member"});
                 }
                 else 

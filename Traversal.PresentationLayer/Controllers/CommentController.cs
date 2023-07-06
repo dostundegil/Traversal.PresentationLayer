@@ -26,10 +26,12 @@ namespace Traversal.PresentationLayer.Controllers
             return PartialView();
         }
         [HttpPost]
-        public IActionResult AddComment(Comment p)
+        public async Task<IActionResult> AddComment(Comment p)
         {
             p.CommentDate = Convert.ToDateTime(DateTime.Now.ToShortDateString());
             p.CommentState = true;
+            var value = await _userManager.FindByIdAsync((p.AppUserID).ToString());
+            p.CommentUser = value.Name;
             _commentService.TAdd(p);
 
             return RedirectToAction("Index", "Destination");

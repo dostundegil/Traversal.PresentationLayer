@@ -30,7 +30,7 @@ namespace Traversal.BusinessLayer.Concrate
 
         public Feature TGetById(int id)
         {
-            throw new NotImplementedException();
+           return _featureDal.GetByID(id);
         }
 
         public List<Feature> TGetList()
