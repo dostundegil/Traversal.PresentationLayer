@@ -12,6 +12,7 @@ namespace Traversal.EntityLayer.Concrate
         [Key]
         public int DestinationID { get; set; }
         public string City { get; set; }
+        public string? CityEn { get; set; }
         public string DayNight { get; set; }
         public double Price { get; set; }
         public string Image { get; set; }
