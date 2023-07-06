@@ -12,6 +12,9 @@ namespace Traversal.DataAccessLayer.Abstract
         public List<ContactUs> GetSentMessages();
         public List<ContactUs> GetReceivedMessages();
 
+        public List<ContactUs> GetMessages();
+        public List<ContactUs> GetDeletedMessages();
+
         void ContactUsStatusChangeToFalse(int id);
         void ContactUsStatusChangeToTrue(int id);
     }

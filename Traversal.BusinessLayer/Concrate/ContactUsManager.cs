@@ -43,9 +43,19 @@ namespace Traversal.BusinessLayer.Concrate
             return _contactUsDal.GetByID(id);
         }
 
+        public List<ContactUs> TGetDeletedMessages()
+        {
+            return _contactUsDal.GetDeletedMessages();
+        }
+
         public List<ContactUs> TGetList()
         {
             return _contactUsDal.GetList();
+        }
+
+        public List<ContactUs> TGetMessages()
+        {
+            return _contactUsDal.GetMessages(); 
         }
 
         public List<ContactUs> TGetReceivedMessages()

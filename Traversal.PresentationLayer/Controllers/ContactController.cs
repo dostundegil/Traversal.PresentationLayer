@@ -36,7 +36,8 @@ namespace Traversal.PresentationLayer.Controllers
                     Status = true,
                     Name = model.Name,
                     Subject = model.Subject,
-                    MessageDate = Convert.ToDateTime(DateTime.Now.ToShortDateString())
+                    MessageDate = Convert.ToDateTime(DateTime.Now.ToShortDateString()),
+                    MessageType= "Gelen Mesajlar"
                 });
 
                 return RedirectToAction("Index", "Default");

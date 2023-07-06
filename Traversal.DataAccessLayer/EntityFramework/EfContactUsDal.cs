@@ -20,6 +20,7 @@ namespace Traversal.DataAccessLayer.EntityFramework
             var values = context.ContactsUses.Where(x => x.ContactUsID == id).FirstOrDefault();
             values.Status = false;
             context.Update(values);
+            context.SaveChanges();
         }
 
         public void ContactUsStatusChangeToTrue(int id)
@@ -28,6 +29,19 @@ namespace Traversal.DataAccessLayer.EntityFramework
             var values = context.ContactsUses.Where(x => x.ContactUsID == id).FirstOrDefault();
             values.Status = true;
             context.Update(values);
+            context.SaveChanges();
+        }
+
+        public List<ContactUs> GetDeletedMessages()
+        {
+            var context = new Context();
+            return context.ContactsUses.Where(x => x.Status == false).ToList();
+        }
+
+        public List<ContactUs> GetMessages()
+        {
+            var context = new Context();
+            return context.ContactsUses.Where(x => x.Status == true).ToList();
         }
 
         public List<ContactUs> GetReceivedMessages()

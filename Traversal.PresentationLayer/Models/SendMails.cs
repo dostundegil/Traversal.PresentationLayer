@@ -1,6 +1,5 @@
 ﻿using MimeKit;
 using MailKit.Net.Smtp;
-using TraversalCoreProje.Models;
 
 namespace Traversal.PresentationLayer.Models
 {

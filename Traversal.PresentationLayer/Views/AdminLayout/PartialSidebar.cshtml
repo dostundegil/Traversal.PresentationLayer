@@ -53,10 +53,28 @@
     </li>
 
     <li class="menu-item">
-        <a href="index.html" class="menu-link">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
             <i class="menu-icon tf-icons bx bx-message-rounded-dots"></i>
-            <div data-i18n="Analytics">Mesajlar</div>
+            <div data-i18n="Layouts">Mesaj İşlemleri</div>
         </a>
+
+        <ul class="menu-sub">
+            <li class="menu-item">
+                <a href="/Admin/Message/Index/" class="menu-link">
+                    <div data-i18n="Without menu">Gelen Mesajlar</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="/Admin/Message/SentMessages/" class="menu-link">
+                    <div data-i18n="Without navbar">Gönderilen Mesajlar</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="/Admin/Message/DeletedMessages/" class="menu-link">
+                    <div data-i18n="Without navbar">Silinen Mesajlar</div>
+                </a>
+            </li>
+        </ul>
     </li>
     <li class="menu-item">
         <a href="/Admin/Comment/Index/" class="menu-link">

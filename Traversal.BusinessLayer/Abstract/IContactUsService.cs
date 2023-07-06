@@ -11,7 +11,8 @@ namespace Traversal.BusinessLayer.Abstract
     {
         public List<ContactUs> TGetSentMessages();
         public List<ContactUs> TGetReceivedMessages();
-
+        public List<ContactUs> TGetMessages();
+        public List<ContactUs> TGetDeletedMessages();
         void TContactUsStatusChangeToFalse(int id);
         void TContactUsStatusChangeToTrue(int id);
     }
