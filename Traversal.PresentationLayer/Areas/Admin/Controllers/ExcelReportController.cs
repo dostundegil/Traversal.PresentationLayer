@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using Traversal.BusinessLayer.Abstract;
 using Traversal.PresentationLayer.Areas.Admin.Models;
 
 namespace Traversal.PresentationLayer.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("Admin")]
     [Route("Admin/[controller]/[action]/{id?}")]
     public class ExcelReportController : Controller

@@ -7,6 +7,7 @@ using Traversal.PresentationLayer.CQRS.Queries.GuideQueries;
 
 namespace Traversal.PresentationLayer.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [AllowAnonymous]
     [Area("Admin")]
     public class GuideMediatRController : Controller

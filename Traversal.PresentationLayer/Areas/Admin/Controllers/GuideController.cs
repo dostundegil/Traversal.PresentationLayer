@@ -9,9 +9,11 @@ using System.Threading.Tasks;
 using Traversal.BusinessLayer.ValidationRules;
 using FluentValidation.Results;
 using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Traversal.PresentationLayer.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("Admin")]
     [Route("Admin/[controller]/[action]/{id?}")]
     public class GuideController : Controller

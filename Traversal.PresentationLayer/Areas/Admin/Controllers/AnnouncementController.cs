@@ -11,7 +11,7 @@ using Traversal.PresentationLayer.Areas.Admin.Models;
 
 namespace Traversal.PresentationLayer.Areas.Admin.Controllers
 {
-    [AllowAnonymous]
+    [Authorize(Roles = "Admin")]
     [Area("Admin")]
     [Route("Admin/[controller]/[action]/{id?}")]
     public class AnnouncementController : Controller

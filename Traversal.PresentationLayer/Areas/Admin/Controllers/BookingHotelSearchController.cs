@@ -4,10 +4,12 @@ using System;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Traversal.PresentationLayer.Areas.Admin.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Traversal.PresentationLayer.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class BookingHotelSearchController : Controller
     {
         public async Task<IActionResult> Index()
