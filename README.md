@@ -91,79 +91,80 @@ User Interface: HTML/CSS - BOOTSTRAP were utilized.
 
 ## UI
 
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/API/1.png">
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/API/2.png">
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/API/3.png">
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/API/4.png">
-
-
-## API CONSUME
-
 Home Page
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/ui/1.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/ui/2.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/ui/3.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/ui/4.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/ui/5.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/ui/6.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/ui/7.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/ui/8.png">
 
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/UI/1.png">
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/UI/2.png">
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/UI/3.png">
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/UI/4.png">
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/UI/5.png">
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/UI/6.png">
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/UI/7.png">
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/UI/8.png">
+Destinations
 
-Properties
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/ui/9.png">
 
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/UI/9.png">
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/UI/10.png">
+Guides 
+
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/ui/10.png">
 
 Contact Us
 
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/UI/11.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/ui/11.png">
+
+
+## Destination Details
+
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/details/1.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/details/2.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/details/3.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/details/4.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/details/5.png">
+
+## Login - Register
+
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/login/1.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/login/2.png">
+
+## Member Panel
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/member/1.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/member/2.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/member/3.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/member/4.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/member/5.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/member/6.png">
 
 ## Admin Panel
 
-Properties CRUD
+Dashboard
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/admin%20panel/1.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/admin%20panel/2.png">
+Destination Crud - Excel Report
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/admin%20panel/3.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/admin%20panel/18.png">
+Guide Crud
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/admin%20panel/4.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/admin%20panel/5.png">
+Messages 
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/admin%20panel/6.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/admin%20panel/7.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/admin%20panel/8.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/admin%20panel/9.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/admin%20panel/10.png">
+Comment Crud
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/admin%20panel/11.png">
+Reservation Crud
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/admin%20panel/12.png">
+User List
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/admin%20panel/13.png">
+Features Crud
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/admin%20panel/14.png">
+Role Assign - Role Crud
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/admin%20panel/15.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/admin%20panel/16.png">
+<img width="1141" alt="image" src="https://github.com/dostundegil/Traversal.PresentationLayer/blob/master/Traversal.PresentationLayer/wwwroot/screenshots/admin%20panel/17.png">
 
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/AdminPanel/1.png">
-
-Recieved Messages
-
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/AdminPanel/2.png">
-
-Message Details/Reply Messages
-
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/AdminPanel/3.png">
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/AdminPanel/4.png">
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/AdminPanel/5.png">
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/AdminPanel/6.png">
-
-Sent Messages
-
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/AdminPanel/7.png">
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/AdminPanel/9.png">
-
-Manager CRUD
-
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/AdminPanel/10.png">
-
-About Us CRUD
-
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/AdminPanel/11.png">
-
-Contact Us CRUD
-
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/AdminPanel/12.png">
-
-Features CRUD
-
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/AdminPanel/13.png">
-
-Services CRUD
-
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/AdminPanel/14.png">
-
-Testimonials CRUD
-
-<img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/AdminPanel/15.png">
 
 
 ## Contact
