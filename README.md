@@ -57,6 +57,7 @@ User Interface: HTML/CSS - BOOTSTRAP were utilized.
 * EPPlus library was used to allow admins to generate Excel reports.
 * Data entries were validated and customized error messages were provided to users using the Fluent Validation library.
 * Logging was implemented using the Serilog library.
+* SignalR.
 
 ## Technical Specifications of the Project:
 
@@ -68,6 +69,7 @@ User Interface: HTML/CSS - BOOTSTRAP were utilized.
 ## Features of the Project:
 
 <h3> Features for Users </h3>
+
 * Users can register and log in to the system.
 * Users can update their profiles.
 * Users can upload photos to the system.
@@ -75,7 +77,9 @@ User Interface: HTML/CSS - BOOTSTRAP were utilized.
 * Users can view their active/pending/past reservations.
 * Users can comment on shared routes.
 * Users can send messages to administrators.
+
 <h3> Features for Admins </h3>
+
 * Dashboard for admin panel.
 * Admins can view messages received from users and respond to them by sending emails to the user's email address.
 * Admins can approve reservations.
@@ -85,7 +89,7 @@ User Interface: HTML/CSS - BOOTSTRAP were utilized.
 * CRUD operations for users.
 * Admins can add new roles, edit existing roles, and assign roles to users.
 
-## API LAYER
+## UI
 
 <img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/API/1.png">
 <img width="1141" alt="image" src="https://raw.githubusercontent.com/dostundegil/RealHouzing/master/realHouzingImages/API/2.png">
