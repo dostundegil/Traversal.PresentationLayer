@@ -13,7 +13,7 @@ namespace Traversal.DataAccessLayer.Concrate
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=DESKTOP-QEJG79H\\MSSQLSERVER01;database=TraversalDB;Integrated Security=true;");
+            optionsBuilder.UseSqlServer("server=DESKTOP-NMRQQJ1\\SQLEXPRESS;database=TraversalDB;Integrated Security=true;");
         }
         public DbSet<About> Abouts { get; set; }
 
