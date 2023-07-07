@@ -11,6 +11,7 @@ using Traversal.EntityLayer.Concrate;
 namespace Traversal.PresentationLayer.Areas.Member.Controllers
 {
     [Area("Member")]
+    [Route("Member/[controller]/[action]/{id?}")]
     public class ReservationController : Controller
     {
         private readonly IDestinationService _destinationService;
