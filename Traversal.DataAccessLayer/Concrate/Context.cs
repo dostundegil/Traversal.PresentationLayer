@@ -13,7 +13,7 @@ namespace Traversal.DataAccessLayer.Concrate
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=104.247.162.242\\MSSQLSERVER2019;database=alikaany_traversaldb;user=alikaany_admin;password=5asA3x?88;");
+            optionsBuilder.UseSqlServer("");
         }
         public DbSet<About> Abouts { get; set; }
 
